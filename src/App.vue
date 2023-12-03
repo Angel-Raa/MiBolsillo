@@ -44,7 +44,7 @@ const income: ComputedRef<string> = computed(() => {
     .reduce((acc, transaccion) => {
       return acc + transaccion.amount
     }, 0)
-    .toFixed(5)
+    .toFixed(3)
 })
 // expenses
 const expenses: ComputedRef<string> = computed(() => {
@@ -53,7 +53,7 @@ const expenses: ComputedRef<string> = computed(() => {
     .reduce((acc, transaccion) => {
       return acc + transaccion.amount
     }, 0)
-    .toFixed(5)
+    .toFixed(3)
 })
 const saveTransactionsToLocalStorage = ( ) => {
   localStorage.setItem('transactions', JSON.stringify(transactions.value))
